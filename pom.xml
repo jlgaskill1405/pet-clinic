@@ -2,8 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-
     <packaging>pom</packaging>
     <modules>
         <module>pet-clinic-data</module>
@@ -24,16 +22,25 @@
     <properties>
         <java.version>11</java.version>
     </properties>
-
-    <dependencies></dependencies>
-
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+<!--                <version>2.5.3</version>-->
+                <configuration>
+                    <goals>install</goals>
+                </configuration>
+
+            </plugin>
         </plugins>
     </build>
+    <scm>
+        <developerConnection>scm:git:git@github.com:jlgaskill1405/pet-clinic.git</developerConnection>
+    </scm>
 
 </project>
